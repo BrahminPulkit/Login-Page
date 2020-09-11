@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<element>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>HibernateApplication</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+ 	<servlet-name>Employee</servlet-name>
+ 	<servlet-class>com.hibernate.EmployeeListServlet</servlet-class>
+ </servlet>
+ <servlet>
+ 	<servlet-name>Add</servlet-name>
+ 	<servlet-class>com.hibernate.AddEmployeeServlet</servlet-class>
+ </servlet>
+
+ <servlet>
+ 	<servlet-name>Delete</servlet-name>
+ 	<servlet-class>com.hibernate.DeleteEmployeeServlet</servlet-class>
+ </servlet>
+ 
+ <servlet>
+ 	<servlet-name>Edit</servlet-name>
+ 	<servlet-class>com.hibernate.EditEmployeeServlet</servlet-class>
+ </servlet>
+ 
+ <servlet-mapping>
+ 	<servlet-name>Edit</servlet-name>
+ 	<url-pattern>/EditEmployeeServlet</url-pattern>
+ </servlet-mapping>
+ 
+ <servlet-mapping>
+ 	<servlet-name>EmployeeList</servlet-name>
+ 	<url-pattern>/EmployeeListServlet</url-pattern>
+ </servlet-mapping>
+
+ <servlet-mapping>
+ 	<servlet-name>Add</servlet-name>
+ 	<url-pattern>/AddEmployeeServlet</url-pattern>
+ </servlet-mapping>
+ 
+ <servlet-mapping>
+ 	<servlet-name>Delete</servlet-name>
+ 	<url-pattern>/DeleteEmployeeServlet</url-pattern>
+ </servlet-mapping>
+ 
+ <session-config>
+ 	<session-timeout>
+ 	30
+ 	</session-timeout>
+ </session-config>
+</web-app>
+</element>
